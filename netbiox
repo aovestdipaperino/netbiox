@@ -18,7 +18,7 @@ NBIOXPID=$PIDDIR/nbiox.pid
 unset TMPDIR
 
 # See if the daemons are there
-test -x /usr/sbin/netbiox || exit 0
+test -x /usr/sbin/netbioxd || exit 0
 
 . /lib/lsb/init-functions
 
@@ -32,7 +32,7 @@ case $1 in
 		# Make sure we have our PIDDIR, even if it's on a tmpfs
 		install -o root -g root -m 755 -d $PIDDIR
 
- 		if ! start-stop-daemon --start --quiet --oknodo --exec /usr/sbin/netbiox -- -D
+ 		if ! start-stop-daemon --start --quiet --oknodo --exec /usr/sbin/netbioxd -- -D
 		then
                         log_daemon_msg "netbiox failed?"
 			log_end_msg 1
@@ -70,7 +70,7 @@ case $1 in
 		$0 start
 		;;
         status)
-		status_of_proc -p $NBIOXPID /usr/sbin/netbiox netbiox
+		status_of_proc -p $NBIOXPID /usr/sbin/netbioxd netbiox
 		exit $?
 		;;
 	*)

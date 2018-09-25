@@ -1,5 +1,9 @@
 # netbiox
 
+## Purpose:
+
+A service that resolves netbios names based upon /etc/samba/lmhosts file. To be used when SAMBA is configured to have different configuration based on the virtual IP address of the server, allowing to consolidate a bunch of virtual SMB servers into a single place.
+
 ## Instructions: 
 
 Build the daemon with

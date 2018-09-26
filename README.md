@@ -30,8 +30,8 @@ Example:
 
 Refresh the services:
 
-`systemctl daemon-reload`
+`sudo systemctl daemon-reload`
 
 Start the netbiox daemon
 
-`service netbiox start`
+`sudo service netbiox start`

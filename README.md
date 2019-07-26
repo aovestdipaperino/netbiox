@@ -20,17 +20,17 @@ Build the daemon with
 
 `cc netbiox.c -o netbioxd`
 
-Move it to \usr\sbin:
+Move it to /usr/sbin:
 
-`sudo mv netbioxd \usr\sbin`
+`sudo mv netbioxd /usr/sbin`
 
 Move the service configuration file into \etc\init.d\netbiox
 
-`sudo mv netbiox \etc\init.d\netbiox`
+`sudo mv netbiox /etc/init.d/netbiox`
 
 Create an lmhosts file:
 
-`sudo nano \etc\samba\lmhosts`
+`sudo nano /etc/samba/lmhosts`
 
 Example:
 
@@ -41,6 +41,10 @@ Example:
 Refresh the services:
 
 `sudo systemctl daemon-reload`
+
+Enable the service to start at boot:
+
+`sudo systemctl enable netbiox`
 
 Start the netbiox daemon
 

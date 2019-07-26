@@ -24,7 +24,7 @@ Move it to /usr/sbin:
 
 `sudo mv netbioxd /usr/sbin`
 
-Move the service configuration file into \etc\init.d\netbiox
+Move the service configuration file into /etc/init.d/netbiox
 
 `sudo mv netbiox /etc/init.d/netbiox`
 
